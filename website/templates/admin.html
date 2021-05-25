@@ -1,0 +1,22 @@
+{% extends "main.html" %} {% block title %}Admin{% endblock %}
+{% block content %}
+
+</ul>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.first_name}}</td>
+        <td>{{ user.email}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
