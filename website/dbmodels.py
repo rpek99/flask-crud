@@ -18,4 +18,4 @@ try:
     db.create_all()
     db.session.commit()
 except:
-    print("There was an error creating databases")
+    print("There was an error creating databases model")
