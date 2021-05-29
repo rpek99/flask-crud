@@ -4,13 +4,13 @@ from .dbmodels import User
 
 views = Blueprint('views', __name__)
 
-@views.route('/', methods = ["GET","POST"])
+@views.route('/')
 @login_required
 def home():
     
     return render_template("home.html", user=current_user)
 
-@views.route('/admin', methods = ["GET","POST"])
+@views.route('/admin')
 @login_required
 def admin():
     users = User.query.all()
